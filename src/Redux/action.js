@@ -1,4 +1,4 @@
-import {ADD_TO_CART,REDUCE_QUANTITY,ADD_QUANTITY} from  "./actionTypes"
+import {ADD_TO_CART,REDUCE_QUANTITY,ADD_QUANTITY,CONFIRM_ORDER} from  "./actionTypes"
 
 export const addItemToCart =(payload)=>{
     console.log(payload)
@@ -23,3 +23,8 @@ export const addQuantity =(payload)=>{
     }
    
 }
+
+export const confirmOrder = (payload) => ({
+    type: CONFIRM_ORDER,
+    payload
+})

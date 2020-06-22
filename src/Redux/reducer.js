@@ -7,20 +7,47 @@ const initState ={
     orderArr:[]
 }
 const reducer = (state = initState,action)=>{
+    console.log(state.cartArr)
     switch(action.type){
         case ADD_TO_CART:{
-        let item  = state.productArr.find(item=>item.id===action.payload)   
-     return{
-         ...state,
-         cartArr:[...state.cartArr,item]
-         
-
-
-     }
+            let item  = state.productArr.find(item=>item.id===action.payload)
+            let cartArr = [...state.cartArr]
+            // duplicate
+            let flag = false
+            for( let i=0; i<state.cartArr.length; i++){
+                if( cartArr[i].id === Number(action.payload) ){
+                    flag = true;
+                    cartArr[i].qty++
+                    break
+                }
+            }
+            if(!flag){
+                cartArr = [ ...cartArr, { ...item, qty:1 } ]
+            }
+            return{
+                ...state,
+                cartArr:cartArr
+            }
         }
-
-     default:{
-         return{...state}
+        case REDUCE_QUANTITY: {
+            let id = action.payload
+            let cartArr = state.cartArr.map( item => item.id===id? { ...item, qty:item.qty-1 }: item )
+            cartArr = cartArr.filter(item => item.qty>0 )
+            return {
+                ...state,
+                cartArr:cartArr
+            }
+        }
+        case ADD_QUANTITY: {
+            let id = action.payload
+            const cartArr = state.cartArr.map( item => item.id===id? { ...item, qty:item.qty+1 }: item )
+            return {
+                ...state,
+                cartArr:cartArr
+            }
+        }
+        default:{
+            return{...state}
      }   
     }
 }

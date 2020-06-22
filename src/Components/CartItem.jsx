@@ -8,11 +8,11 @@ export default function CartItem(props) {
 			<p>{props.price}</p>
 			<div>
 				Quantity
-				<p>{props.quantity}</p>
+				<p>{props.qty}</p>
 			</div>
 
-			<button onClick={() => props.handleClick(props.id)}>Add Quantity</button>
-			<button onClick={() => props.handleClick(props.id)}>
+			<button onClick={() => props.handleAdd(props.id)}>Add Quantity</button>
+			<button onClick={() => props.handleReduce(props.id)}>
 				Reduce Quantity
 			</button>
 		</div>

@@ -1,3 +1,4 @@
 export const ADD_TO_CART =  "ADD_TO_CART"
 export const REDUCE_QUANTITY = "REDUCE_QUANTITY"
 export const ADD_QUANTITY = "ADD_QUANTITY"
+export const CONFIRM_ORDER = "CONFIRM ORDER"
