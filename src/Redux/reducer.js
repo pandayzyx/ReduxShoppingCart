@@ -1,10 +1,12 @@
-import {ADD_TO_CART,REDUCE_QUANTITY,ADD_QUANTITY} from  "./actionTypes"
+import {ADD_TO_CART,REDUCE_QUANTITY,ADD_QUANTITY,CONFIRM_ORDER,ADD_PRODUCT,EDIT_PRODUCT,SEE_PRODUCT_DETAILS} from  "./actionTypes"
 import data from  "../data.json"
 
 const initState ={
     productArr:[...data],
     cartArr:[],
-    orderArr:[]
+    orderArr:[],
+    orderDetailsFilled:false,
+    item:""
 }
 const reducer = (state = initState,action)=>{
     console.log(state.cartArr)
@@ -44,6 +46,34 @@ const reducer = (state = initState,action)=>{
             return {
                 ...state,
                 cartArr:cartArr
+            }
+        }
+
+        case CONFIRM_ORDER: {
+            let id = action.payload
+            const cartArr = state.cartArr.map( item => item.id===id? { ...item, qty:item.qty+1 }: item )
+            return {
+                ...state,
+                orderArr:cartArr,
+                cartArr:[]
+
+            }
+        }
+
+        case ADD_PRODUCT: {  
+            return {
+                ...state,
+                productArr:[action.payload,...state.productArr]
+
+            }
+        }
+
+        case EDIT_PRODUCT: {
+            
+            return {
+                ...state,
+                productArr:state.productArr.map(item=>item.id===action.payload.id?{...item,...action.payload}:item)
+                
             }
         }
         default:{

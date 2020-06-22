@@ -2,7 +2,7 @@
 	{
 		"item": "ASIAN Prime-01 Sports Running Shoes for Men",
 		"price": 1800,
-		"id": 2,
+		"id": "2",
 		"category": "Shoes",
 		"description": {
 			"Sole": "EVA",
@@ -18,7 +18,7 @@
 	{
 		"item": "Bloos Jeans Men's Denim Grey Casual Buttoned Jeans",
 		"price": 2000,
-		"id": 3,
+		"id": "3",
 		"category": "Jeans",
 		"description": {
 			"Material": "Denim",
@@ -33,7 +33,7 @@
 	{
 		"item": "SPENCHER® Stylsih Analog Round Dial Stainless Steel Watch for Mens & Boys 3039SM05&3039SM06",
 		"price": 1500,
-		"id": 4,
+		"id": "4",
 		"category": "Watch",
 		"description": {
 			"Strap Material": "Stainless Steel",
@@ -48,7 +48,7 @@
 	{
 		"item": "Honor 9X (Sapphire Blue, 6+128GB Storage) -Pop up Front Camera & 48MP Triple Rear Camera",
 		"price": 30000,
-		"id": 5,
+		"id": "5",
 		"category": "Mobile",
 		"description": {
 			"Camera": "48MP + 8MP + 2MP rear camera | 16MP front facing camera",
@@ -62,7 +62,7 @@
 	{
 		"item": "Lenovo Ideapad Slim 3i 10th Gen Intel Core i3 14 inch FHD Thin and Light Laptop (8GB/256GB/Windows 10/MS Office/Grey/1.6Kg), 81WD0045IN",
 		"price": 40000,
-		"id": 6,
+		"id": "6",
 		"category": "Laptop",
 		"description": {
 			"Processor": "10th Gen Intel Core i3-1005G1 processor, 1.2 Ghz base speed, 3.4 Ghz max speed, 2 Cores, 4Mb Smart Cache",

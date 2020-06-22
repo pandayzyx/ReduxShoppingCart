@@ -13,14 +13,16 @@ class Cart extends React.Component {
 
     handleToggle = () => {
         this.setState({ showUserData: !this.state.showUserData })
+
     }
     render (){
-        let {cartArr, addQty, reduceQty} = this.props
+        let {cartArr, addQty, reduceQty,orderDetailsFilled} = this.props
         return(
             <div>
                 { cartArr.length === 0 &&  "Cart is empty" }
                 {
                     cartArr && cartArr.map(item=>
+                        
                         <CartItem 
                             handleAdd={addQty}
                             handleReduce={reduceQty} 
@@ -42,7 +44,9 @@ class Cart extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    cartArr: state.cartArr
+    cartArr: state.cartArr,
+    orderDetailsFilled:state.orderDetailsFilled
+
 })
 
 const mapDispatchToProps = dispatch => ({

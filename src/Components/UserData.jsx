@@ -18,9 +18,16 @@ class UserData extends Component {
     }
 
     handleSubmit = (e) => {
+        let {name,phone,email} =  this.state
         e.preventDefault()
-        let payload = {...this.state}
-        this.props.confirmOrder( payload )
+        if(name === ""||phone === ""||email===""){
+            alert("Enter all details")
+        }
+        else{
+            let payload = {...this.state}
+            this.props.confirmOrder( payload )
+        }
+      
     }
     render() {
         return (

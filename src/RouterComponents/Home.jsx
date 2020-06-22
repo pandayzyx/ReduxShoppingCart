@@ -2,6 +2,7 @@ import React from "react";
 import data from "../data.json";
 import ProductItem from "../Components/ProductItem";
 import {connect} from  "react-redux"
+import { v4 as uuidv4 } from 'uuid';
 class Home extends React.Component {
 	constructor(props) {
 		super(props);
@@ -45,7 +46,10 @@ class Home extends React.Component {
                     }
                 })
                 .map((item) => (
-					<ProductItem {...item} />
+					<div key = {uuidv4()}>
+   	            <ProductItem  {...item} />
+					</div>
+				
 				))}
 			</div>
 		);

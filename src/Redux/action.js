@@ -1,4 +1,5 @@
-import {ADD_TO_CART,REDUCE_QUANTITY,ADD_QUANTITY,CONFIRM_ORDER} from  "./actionTypes"
+import {ADD_TO_CART,REDUCE_QUANTITY,ADD_QUANTITY,CONFIRM_ORDER,ADD_PRODUCT,EDIT_PRODUCT,SEE_PRODUCT_DETAILS} from  "./actionTypes"
+import AddProduct from "../RouterComponents/AddProduct"
 
 export const addItemToCart =(payload)=>{
     console.log(payload)
@@ -27,4 +28,14 @@ export const addQuantity =(payload)=>{
 export const confirmOrder = (payload) => ({
     type: CONFIRM_ORDER,
     payload
+})
+
+export const addItem = (payload) => ({
+    type: ADD_PRODUCT,
+    payload:payload
+})
+
+export const editItem = (payload) => ({
+    type: EDIT_PRODUCT,
+    payload:payload
 })
