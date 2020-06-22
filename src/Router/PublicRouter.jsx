@@ -10,9 +10,9 @@ export default function PublicRouter(){
   return(
   <Switch>
       <Route exact  path = "/" render = {()=><Home/>}></Route>
-      <Route render = {(props)=><AddProducts{...props}/>} path = "/addproducts"></Route>
-      <Route render = {()=><Cart/>} path = "/cart"></Route>
-      <Route render = {()=><Orders/>} path = "/orders"></Route>
+      <Route  path = "/addproducts" render = {(props)=><AddProducts{...props}/>} ></Route>
+      <Route path = "/cart" render = {()=><Cart/>} ></Route>
+      <Route path = "/orders"render = {()=><Orders/>} ></Route>
   </Switch>
   )
 }

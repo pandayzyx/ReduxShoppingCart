@@ -4,7 +4,7 @@
 		"price": 1800,
 		"id": 2,
 		"category": "Shoes",
-		"Description": {
+		"description": {
 			"Sole": "EVA",
 			"Closure": "Slip On",
 			"ShoeWidth": "Medium",
@@ -20,7 +20,7 @@
 		"price": 2000,
 		"id": 3,
 		"category": "Jeans",
-		"Description": {
+		"description": {
 			"Material": "Denim",
 			"Wear": "Western wear",
 			"Ocassion": "Casual",
@@ -35,7 +35,7 @@
 		"price": 1500,
 		"id": 4,
 		"category": "Watch",
-		"Description": {
+		"description": {
 			"Strap Material": "Stainless Steel",
 			"Dial Color": "Silver&Brown",
 			"Wearabilty ": "Casual | Look",
@@ -50,7 +50,7 @@
 		"price": 30000,
 		"id": 5,
 		"category": "Mobile",
-		"Description": {
+		"description": {
 			"Camera": "48MP + 8MP + 2MP rear camera | 16MP front facing camera",
 			"UI": "EMUI 9.1.0 based on Android 9 operating system with 2.2GHz Kirin 710 F octa core processor",
 			"Battery": "4000mAH Lithium polymer battery",
@@ -64,7 +64,7 @@
 		"price": 40000,
 		"id": 6,
 		"category": "Laptop",
-		"Description": {
+		"description": {
 			"Processor": "10th Gen Intel Core i3-1005G1 processor, 1.2 Ghz base speed, 3.4 Ghz max speed, 2 Cores, 4Mb Smart Cache",
 			"Operating System": "Pre-loaded Windows 10 Home with lifetime validity",
 			"Display:": "4 inch screen with (1920X1080) full HD display |Anti Glare technology",
